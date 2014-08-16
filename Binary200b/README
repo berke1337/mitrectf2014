@@ -1,0 +1,4 @@
+Use debugger/IDA to figure out that it matches the input against a bunch of regexes.
+Use regex-extract.rb to extract them from the binary.
+Notice that the last 3 regexes are simple per-character matches once you remove the optional characters, and they're exactly 40 chars.
+Intersect those regexes to find the flag.

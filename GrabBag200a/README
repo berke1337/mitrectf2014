@@ -1,0 +1,13 @@
+Use debugger, break panel::setSys1 and panel::disSys1
+Run, and type at the prompt:
+R
+T
+B
+=> debugger breaks
+Call disSys2..4 as well from here with the right `this'
+continue
+=> debugger breaks again
+Call setSys2..4 as well from here with the right `this'
+continue
+=> get a prompt
+type U to unlock and the flag appears!

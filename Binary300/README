@@ -1,0 +1,29 @@
+program calls ptrace to interfere with debugger, no matter, use LD_PRELOAD to disable:
+gcc -shared -fPIC -m32 ptrace.c
+LD_PRELOAD=./a.out ./9674ea9858c5edaa760ff4a656802999-doors
+
+Then, call doors with gdb in this order:
+
+doorwithkey
+door1
+door0
+door9001
+door2006
+door121
+door3
+door271
+door111970
+  doorBlue
+    door777
+	  door42
+		dead end
+	  door25
+		door5i
+		door42
+		  dead end
+  doorRed
+    door34
+    door111
+	door87
+	door66
+	  => get the flag

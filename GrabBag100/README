@@ -1,0 +1,10 @@
+Unzip
+Fix cstdlib-include...
+Play around a little with the keygen and modification times to put into srand()
+Nothing works...
+Remember there was .git
+=> gitk -> nothing interesting
+=> git branch -> shows other branch
+=> git checkout twig
+=> gitk
+WTF is a yellow square? Oh, look at that, it's a note with the flag.

@@ -1,0 +1,2 @@
+Multiple PNG files are concatenated.
+Use pngextract.rb to extract them all, view them to see the flag.

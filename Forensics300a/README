@@ -1,0 +1,8 @@
+=> Use volatility -- http://www.volatilityfoundation.org/
+python vol.py imageinfo -f 4BB1D32DF7-20140626-172101.raw 
+python vol.py hivelist -f 4BB1D32DF7-20140626-172101.raw --profile=WinXPSP3x86
+python vol.py hashdump -f 4BB1D32DF7-20140626-172101.raw --profile=WinXPSP3x86 -y 0xe1035b60 -s 0xe15cc008 > ~/Documents/Berke1337/MitreCTF2014/Forensics300a/hashes
+=> This gives a couple of LM hashes, break using http://rainbowtables.it64.com/ to get:
+SU94H S3CUR3
+7L#7XL9MQYL0BI
+=> These don't work, grep -ai SU94H on the memory dump to find the correct capitalization to unzip the zip and find the flag!

@@ -1,0 +1,9 @@
+From debugging/IDA:
+0 prints 'MCA-'
+9 prints 'Done' and invokes check routine
+1-8 print some character.
+=> PIN must be 0[1-8]{8}9 to have output match flag format.
+8^8 = 16M, should be brute-forceable.
+Also it matches against some MD5 hash, don't think there's a way around brute-forcing:
+gcc bf.c
+./a.out |./f0f09d8f2b40ccfb252654c8f4bb4171-safe |grep -B1 -m1 Granted

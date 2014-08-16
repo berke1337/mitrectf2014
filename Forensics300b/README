@@ -1,0 +1,16 @@
+First, extract the .vmdk from the .ova, and then use vmdktool [1] to turn it into a raw image.
+Mount the image (read-only!!!) and do some simple forensics.
+Find /home/georgesr/.bash_history , this talks about contract-documents.zip but it's gone...
+We don't know the password to contract-documents.zip.nc...
+No worries, we have the whole disk image, so find all potential zip headers using:
+=> grep -a -b -o PK f300b.img > zipoff
+Then, use zipreader.rb to try to read the zip headers, output the offsets for zip files with the word 'contract'.
+Extract the zipfile from this offset and try to unzip... the supplied password doesn't work?
+Search for other passwords in the disk image:
+=> grep -a -b -o 'zip -P..................' ~/f300b.img
+First match we already tried
+Second match is the man page or something
+Third uses some shell parameter, explore around this offset to find a wrapper script that appends frozenbananas to the supplied password.
+Supply this to unzip to find the flag.
+
+[1] http://www.freshports.org/sysutils/vmdktool/

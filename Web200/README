@@ -1,0 +1,4 @@
+There's a JS file that has to do with the login, download it.
+First, use some online JS beautifier for good indenting.
+Then copy the array on top into ruby (yay, same syntax!), and use it to replace all occurences of strings using replace_838e.rb
+Check the login() function for the credentials, and after follow the leads in the page source a couple times to find the flag.
